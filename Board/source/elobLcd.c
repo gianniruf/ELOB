@@ -6,7 +6,7 @@
  */ 
 
 //***INCLUDES***
-#include "elobLcd.h"
+#include "../includes/elobLcd.h"
 #include <avr/io.h>
 #define F_CPU 16000000	//16MHz
 #include <util/delay.h>
@@ -15,10 +15,10 @@
 //***DEFINES***
 #define lcdRegData			(PORTL |= (1<<0))	//RS
 #define lcdRegInstruction	(PORTL &= ~(1<<0))	//
-#define lcdRead				(PORTL |= (1<<1))	//R/W
-#define lcdWrite			(PORTL &= ~(1<<1))	//
-#define lcdEnable			(PORTL |= (1<<2))	//E (Clock)
-#define lcdDisable			(PORTL &= ~(1<<2))	//
+#define lcdRead		(PORTL |= (1<<1))	//R/W
+#define lcdWrite	(PORTL &= ~(1<<1))	//
+#define lcdEnable	(PORTL |= (1<<2))	//E (Clock)
+#define lcdDisable	(PORTL &= ~(1<<2))	//
 
 #define lcdData0_on		(PORTL |= (1<<4))
 #define lcdData0_off	(PORTL &= ~(1<<4))
@@ -133,26 +133,26 @@ void lcdPutch(char zeichen)
 		case ' ':	//Leerzeichen
 			elobLcd_cursor_R();
 			break;
-		case 'Ã¶':
+		case 'ö':
 			elobLcd_zeichen('o');
 			elobLcd_zeichen('e');
 			break;
-		case 'Ã–':
+		case 'Ö':
 			elobLcd_zeichen('O');
 			elobLcd_zeichen('e');
 			break;
-		case 'Ã¤':
+		case 'ä':
 			elobLcd_zeichen('a');
 			elobLcd_zeichen('e');
 			break;
-		case 'Ã„':
+		case 'Ä':
 			elobLcd_zeichen('A');
 			elobLcd_zeichen('e');
-		case 'Ã¼':
+		case 'ü':
 			elobLcd_zeichen('u');
 			elobLcd_zeichen('e');
 			break;
-		case 'Ãœ':
+		case 'Ü':
 			elobLcd_zeichen('U');
 			elobLcd_zeichen('e');
 		default:

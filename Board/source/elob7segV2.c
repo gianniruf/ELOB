@@ -6,7 +6,7 @@
  */ 
 
 //***INCLUDES***
-#include "elob7segV2.h"
+#include "../includes/elob7segV2.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdlib.h>
@@ -64,10 +64,12 @@ ISR(TIMER3_OVF_vect)
 void elob7seg_init(void)
 {
 	timer3_init();
+	DDRG = 0xFF;
+	DDRH = 0xFF;
 }
 
 /**
- * FÃ¼llt eine INT in das String "elob7seg[4]" ab
+ * Füllt eine INT in das String "elob7seg[4]" ab
  * @param: int zahl, -999...9999
  * @return: void
  */
@@ -116,8 +118,8 @@ void elob7seg_intToString(int zahl)
 /**
  * Gibt Werte auf 7Seg aus
  * wird von Interrupt aufgerufen
- * multiplext selbstÃ¤ndig
- * @param: strings mÃ¼ssen korrekt ausgefÃ¼llt sein!!!
+ * multiplext selbständig
+ * @param: strings müssen korrekt ausgefüllt sein!!!
  */
 void elob7seg_output(void)
 {
@@ -213,7 +215,7 @@ void elob7seg_setWerte(unsigned char stelle)
 }
 
 /**
- * setzt sÃ¤mtiliche Sonderzeichen
+ * setzt sämtiliche Sonderzeichen
  */
 void elob7seg_setSonderzeichen(unsigned char stelle)
 {
@@ -235,7 +237,7 @@ void elob7seg_setSonderzeichen(unsigned char stelle)
 		ledSegDOP_off;
 	}
 	
-	if (stelle == elob7seg_sonderzeichen[ELOB7SEG_STRINGPOS_KOMMA] && stelle > 0)	//komma am schluss ist Ã¼berflÃ¼ssig
+	if (stelle == elob7seg_sonderzeichen[ELOB7SEG_STRINGPOS_KOMMA] && stelle > 0)	//komma am schluss ist überflüssig
 	{
 		komma_on;
 	}

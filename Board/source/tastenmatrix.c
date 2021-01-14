@@ -29,7 +29,7 @@ unsigned int tastenmatrix_zahlberechnungNeg(unsigned int zahl);
 //***FUNKTIONEN***
 
 /**
- * Erkennt flanken/Zustände an Tastenmatrix
+ * Erkennt flanken/ZustÃ¤nde an Tastenmatrix
  *@param	void
  *@return	void
  */
@@ -57,7 +57,7 @@ void tastenmatix_init(void)
 }
 
 /**
- * Bereitet Matrix für Auslesung vor
+ * Bereitet Matrix fÃ¼r Auslesung vor
  */
 void tastenmatrix_vorbereitung(void)
 {
@@ -74,7 +74,7 @@ void tastenmatrix_read(struct taster_matrix * Zeile)
 	tastenmatrix_setMuliplex(Zeile->multiplex);
 	unsigned char state_zeile = 0;
 	matrix_en;
-	state_zeile = (PIND & (0b111<<4));	//speichert aktuellen Zustand (sicher dass keine änderung während durchlauf)
+	state_zeile = (PIND & (0b111<<4));	//speichert aktuellen Zustand (sicher dass keine Ã¤nderung wÃ¤hrend durchlauf)
 	
 	(Zeile->flanke_pos) = state_zeile & (~(Zeile->old));
 	(Zeile->flanke_neg) = (~(state_zeile)) & Zeile->old;

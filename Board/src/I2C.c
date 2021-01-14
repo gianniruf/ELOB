@@ -73,7 +73,7 @@ void I2C_SlvAdress(unsigned char, unsigned char );
 void I2C_WordAdress(unsigned char);
 
 /**
- * Gibt letztes Byte zurück
+ * Gibt letztes Byte zurÃ¼ck
  * @return:		daten: 8-Bit Daten letztes recive
  */
 unsigned char I2C_dataRead(void);
@@ -109,7 +109,7 @@ ISR(TWI_vect)
 
 /**
  * Initialisiert TWI
- * @param:	twbr:	0...255 für TWBR- TWI Bit Rate Register
+ * @param:	twbr:	0...255 fÃ¼r TWBR- TWI Bit Rate Register
  * @param:	twps:	Prescaler Value 1, 4, 16, 64
  */
 void I2C_init(unsigned char twbr																																														, unsigned char twps)
@@ -130,12 +130,12 @@ void I2C_STARTcondition(void)
 }
 
 /**
- * Übernimmt Parameter, ruft Funktion zum ersten mal auf
+ * Ãœbernimmt Parameter, ruft Funktion zum ersten mal auf
  * @param slvAdress:	Adresse des Bausteins, 7-Bit
  * @param wordAdress:	Adresse des Bytes im Slave, 8-Bit
- * @param anzBytes:		Anzahl Bytes am Stück
+ * @param anzBytes:		Anzahl Bytes am StÃ¼ck
  */
-void I2C_write_start(unsigned char slvA, unsigned char wordA, unsigned char anzByt)	//SlvAdress, WordAdress, AnzBytes (amStück)
+void I2C_write_start(unsigned char slvA, unsigned char wordA, unsigned char anzByt)	//SlvAdress, WordAdress, AnzBytes (amStÃ¼ck)
 {
 	slvAdress = slvA;
 	wordAdress = wordA;
@@ -145,12 +145,12 @@ void I2C_write_start(unsigned char slvA, unsigned char wordA, unsigned char anzB
 }
 
 /**
- * Übernimmt Parameter, ruft Funktion zum ersten mal auf
+ * Ãœbernimmt Parameter, ruft Funktion zum ersten mal auf
  * @param slvAdress:	Adresse des Bausteins, 7-Bit
  * @param wordAdress:	Adresse des Bytes im Slave, 8-Bit
- * @param anzBytes:		Anzahl Bytes am Stück
+ * @param anzBytes:		Anzahl Bytes am StÃ¼ck
  */
-void I2C_read_start(unsigned char slvA, unsigned char wordA, unsigned char anzByt)		//SlvAdress, WordAdress, AnzBytes (amStück)
+void I2C_read_start(unsigned char slvA, unsigned char wordA, unsigned char anzByt)		//SlvAdress, WordAdress, AnzBytes (amStÃ¼ck)
 {
 	slvAdress = slvA;
 	wordAdress = wordA;
@@ -321,7 +321,7 @@ unsigned char I2C_readState(void)
 }
 
 /**
- * Gibt letztes Byte zurück
+ * Gibt letztes Byte zurÃ¼ck
  * @return:		daten: 8-Bit Daten letztes recive
  */
 unsigned char I2C_dataRead(void)

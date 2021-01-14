@@ -4,7 +4,7 @@
  * @Author:		Gianni Ruf
  * @Version:	1.0
  **********************************
- * Datum			Version	Name			Änderung
+ * Datum			Version	Name			Ã„nderung
  * 10. Sep 2019		1.0		Gianni Ruf		Erstellung
  */ 
 
@@ -55,7 +55,7 @@ unsigned char adc_state();
 
 /**
 * Read & Convert with min/max
-* @param: *myADC adresse von datenstruktur (min/max muss ausgefühlt sein)
+* @param: *myADC adresse von datenstruktur (min/max muss ausgefÃ¼hlt sein)
 */
 void adc_read(adc_t *);
 

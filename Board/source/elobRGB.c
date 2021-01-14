@@ -41,12 +41,12 @@ void elobRGB_setRed(unsigned char rot)
 }
 
 /**
- * setzt Grün-Wert
- * @param:	RGB-Wert Grün 0..255
+ * setzt GrÃ¼n-Wert
+ * @param:	RGB-Wert GrÃ¼n 0..255
  */
 void elobRGB_setGreen(unsigned char gruen)
 {
-	OCR1B = gruen;	//Compare-Register Grün
+	OCR1B = gruen;	//Compare-Register GrÃ¼n
 }
 
 /**

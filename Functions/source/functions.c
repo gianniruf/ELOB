@@ -24,7 +24,7 @@
 
 /**
  * Wandelt Grad in Radiant um
- * @param:	winkel in °
+ * @param:	winkel in Â°
  * @return:	winkel in PI
  */
 float degToRad(float winkel)
@@ -37,7 +37,7 @@ float degToRad(float winkel)
 /**
  * Wandelt Radiant in Winkel um
  * @param:	winkel in PI	(float)
- * @return:	winkel in °		(float)
+ * @return:	winkel in Â°		(float)
  */
 float radToDeg(float winkel)
 {

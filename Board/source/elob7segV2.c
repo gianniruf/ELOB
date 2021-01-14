@@ -67,7 +67,7 @@ void elob7seg_init(void)
 }
 
 /**
- * F¸llt eine INT in das String "elob7seg[4]" ab
+ * F√ºllt eine INT in das String "elob7seg[4]" ab
  * @param: int zahl, -999...9999
  * @return: void
  */
@@ -116,8 +116,8 @@ void elob7seg_intToString(int zahl)
 /**
  * Gibt Werte auf 7Seg aus
  * wird von Interrupt aufgerufen
- * multiplext selbst‰ndig
- * @param: strings m¸ssen korrekt ausgef¸llt sein!!!
+ * multiplext selbst√§ndig
+ * @param: strings m√ºssen korrekt ausgef√ºllt sein!!!
  */
 void elob7seg_output(void)
 {
@@ -213,7 +213,7 @@ void elob7seg_setWerte(unsigned char stelle)
 }
 
 /**
- * setzt s‰mtiliche Sonderzeichen
+ * setzt s√§mtiliche Sonderzeichen
  */
 void elob7seg_setSonderzeichen(unsigned char stelle)
 {
@@ -235,7 +235,7 @@ void elob7seg_setSonderzeichen(unsigned char stelle)
 		ledSegDOP_off;
 	}
 	
-	if (stelle == elob7seg_sonderzeichen[ELOB7SEG_STRINGPOS_KOMMA] && stelle > 0)	//komma am schluss ist ¸berfl¸ssig
+	if (stelle == elob7seg_sonderzeichen[ELOB7SEG_STRINGPOS_KOMMA] && stelle > 0)	//komma am schluss ist √ºberfl√ºssig
 	{
 		komma_on;
 	}

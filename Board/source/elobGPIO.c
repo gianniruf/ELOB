@@ -22,12 +22,12 @@
 //***FUNKTIONEN***
 /**
  * Erkennt flanken
- * @param:	pointer auf Struktur flanke von gewünschtem PIN
+ * @param:	pointer auf Struktur flanke von gewÃ¼nschtem PIN
  */
 void flankenerkennung_digi(struct flanken_digi *myPIN)
 {
 	unsigned char state_pin = 0;
-	state_pin = *(myPIN->pin);	//speichert aktuellen Zustand (sicher dass keine änderung während durchlauf)
+	state_pin = *(myPIN->pin);	//speichert aktuellen Zustand (sicher dass keine Ã¤nderung wÃ¤hrend durchlauf)
 	
 	(myPIN->flanke_pos) = state_pin & (~(myPIN->old));
 	(myPIN->flanke_neg) = (~(state_pin)) & myPIN->old;
@@ -35,8 +35,8 @@ void flankenerkennung_digi(struct flanken_digi *myPIN)
 }
 
 /**
- * lässt LEDs blinken
- * @param:	pointer auf Struktur blinken mit gewünschtr/em LED
+ * lÃ¤sst LEDs blinken
+ * @param:	pointer auf Struktur blinken mit gewÃ¼nschtr/em LED
  */
 void ledBlinken(struct blinken *myLED)
 {

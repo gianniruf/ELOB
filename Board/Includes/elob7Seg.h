@@ -19,8 +19,8 @@ unsigned char elob7seg_ausgabeHex_werte[4];
 //***FUNKTIONSPROTOTYPEN***
 
 /**
- * Gibt jeweils eine Stelle aus(wechselt Ziffer selbständig)
- * @param	zahl	gewünschte Zahl, -999..9999
+ * Gibt jeweils eine Stelle aus(wechselt Ziffer selbstÃ¤ndig)
+ * @param	zahl	gewÃ¼nschte Zahl, -999..9999
  * @param	hKom	Hochkomma 1=anzeigen
  * @param	DoppP	Doppelpunkt 1=anzeigen
  * @param	komma	Stelle des Komma 0..3, wenn 0 wird nicht angezeigt
@@ -29,7 +29,7 @@ void elob7seg_ausgabeDez(int zahl, unsigned char hKom, unsigned char DoppP, unsi
 
 /**
  * Gibt 4 Hex-Ziffern aus, multiplext selber
- * @param	elob7seg_ausgabeHex_werte muss ausgefüllt sein!!!
+ * @param	elob7seg_ausgabeHex_werte muss ausgefÃ¼llt sein!!!
  */
 void elob7seg_ausgabeHex();
 

@@ -113,13 +113,13 @@ struct flanken_digi schalter;
 
 /**
  * Erkennt flanken
- * @param:	pointer auf Struktur flanke von gewünschtem PIN
+ * @param:	pointer auf Struktur flanke von gewÃ¼nschtem PIN
  */
 void flankenerkennung_digi(struct flanken_digi *);
 
 /**
- * lässt LEDs blinken
- * @param:	pointer auf Struktur blinken mit gewünschtr/em LED
+ * lÃ¤sst LEDs blinken
+ * @param:	pointer auf Struktur blinken mit gewÃ¼nschtr/em LED
  */
 void ledBlinken(struct blinken *);
 

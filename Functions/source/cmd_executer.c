@@ -10,7 +10,13 @@
  */ 
 
 //***INCLUDES***
-#include "cmd_executer.h"
+#include "../includes/cmd_executer.h"
+#include "../includes/fifo.h"
+#include "../../ELOB/includes/elob7segV2.h"
+#include "../../ELOB/includes/elob_adc.h"
+#include "../../ELOB/includes/elob_i2c.h"
+#include "../../ELOB/includes/elob_RGB.h"
+#include "../../ELOB/includes/elob_uart.h"
 #include <string.h>
 #include <avr/io.h>
 
@@ -19,9 +25,14 @@
 enum state_parser {LAST_WHITESPACE = 0, LAST_LETTER, IN_STRING};
 	
 //***VARIABLES GLOBAL***
-
+unsigned int* tokensBeginn[MAX_TOKENS];
+const char error_notFound[]	= "ERROR cmd not Found\n";
+const char help_hwUnits[]	= "There are follows HW-Units:\n";
+const char help_swCmd[]		= "There are follows SW-Cmd's:\n";
+const char help_usage[]		= "Usage: HW Cmd (Value)\n";
 
 //***FUNCTIONSPROTOTYPING***
+char lookUpString(const char* pVarName, const char* table[]);
 
 //***FUNCTIONS***
 
@@ -128,16 +139,106 @@ char lookUpString(const char* pVarName, const char* table[])
 	
 	if (pVarName == NULL || table == NULL)
 	{
-		return ILLEGALPTR;
+		return;
 	}
 	
 	while(table[index] != NULL)
 	{
 		if (strcmp(pVarName, table[index]))
 		{
-			return index:
+			return index;
 		}
 		index++;
 	}
-	return NOTFOUND;
+	return;
+}
+
+int8_t search_cmd(const char * table[], const char ** cmd){
+	int8_t cmdNumber = -1;
+	uint8_t idx = 0;
+	for (idx = 0; idx <= sizeof(*table); idx++);
+	{
+		if (!strcmp(*cmd, *table[idx]))
+			cmdNumber = idx;
+	}
+	return cmdNumber;
+}
+
+void execute_TXTcmd(char * cmd){
+	if (!cmd)
+	{
+		fifo_write(FIFO_CMDEXE_INV_PARAM);
+	} 
+	else
+	{
+		uint8_t nTokens;
+		nTokens = tokensFind(cmd);
+		uint8_t cmdNr = search_cmd(hwSet, tokensBeginn[0]);
+		
+		switch(cmdNr){
+			case CMDEXE_UC:
+				exe_uC();
+				break;
+			case CMDEXE_RGB:
+				break;
+			case CMDEXE_RTC:
+				break;
+			case CMDEXE_LCD:
+				break;
+			case CMDEXE_7SEG:
+				break;
+			case CMDEXE_POTI:
+				break;
+			case CMDEXE_TMP:
+				break;
+			default:
+				//print List of Commands and Usage
+				if (!((cmdNr == CMDEXE_HELP) || (cmdNr == CMDEXE_HELP1)))
+				{
+					strcpy(uart1.dataSend, error_notFound);
+					elobUART1_send(sizeof(error_notFound));
+				}
+				exe_help();
+				break;
+		}
+	}
+}
+
+void exe_uC(void){
+	
+}
+
+void exe_RGB(void){
+	
+}
+
+void exe_RTC(void){
+	
+}
+
+void exe_LCD(void){
+	
+}
+
+void exe_7seg(void){
+	
+}
+
+void exe_poti(void){
+	
+}
+
+void exe_tmp(void){
+	
+}
+
+void exe_help(void){
+	//Send HW-Units
+	strcpy(uart1.dataSend, help_hwUnits);
+	elobUART1_send(sizeof(help_hwUnits));
+	for (uint8_t i; i <= sizeof(hwSet); i++)
+	{
+		strcpy(uart1.dataSend, *hwSet[i]);
+		elobUART1_send(sizeof(hwSet[i]));
+	}
 }

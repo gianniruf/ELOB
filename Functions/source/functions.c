@@ -10,7 +10,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-#include "functions.h"
+#include "../includes/functions.h"
 
 //***DEFINES***
 
@@ -24,7 +24,7 @@
 
 /**
  * Wandelt Grad in Radiant um
- * @param:	winkel in Â°
+ * @param:	winkel in °
  * @return:	winkel in PI
  */
 float degToRad(float winkel)
@@ -37,7 +37,7 @@ float degToRad(float winkel)
 /**
  * Wandelt Radiant in Winkel um
  * @param:	winkel in PI	(float)
- * @return:	winkel in Â°		(float)
+ * @return:	winkel in °		(float)
  */
 float radToDeg(float winkel)
 {
@@ -63,5 +63,5 @@ unsigned int randomnumber(unsigned int MIN, unsigned int MAX)
 	}
 
 	unsigned int bereich = MAX - MIN + 1;
-	return MIN + (bereich * rand() / (RAND_MAX + 1));
+	return MIN + (bereich * rand() / (RAND_MAX - 1.0));
 }

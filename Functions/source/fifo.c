@@ -7,7 +7,7 @@
 
 //***INCLUDES***
 #include <avr/io.h>
-#include "fifo.h"
+#include "../includes/fifo.h"
 
 //***DEFINES***
 #define GROESSE_RINGBUFFER	8
@@ -24,7 +24,7 @@ void fifo_init(void)
 {
 	for (int i = 0; i<GROESSE_RINGBUFFER; i++)
 	{
-		ringbuffer[i] = 0;	//alles mit 0 fÃ¼llen
+		ringbuffer[i] = 0;	//alles mit 0 füllen
 	}
 }
 
@@ -46,12 +46,12 @@ unsigned char fifo_write(unsigned char eventCode)
 		overflow = 1;
 	
 	//Write Code in buffer
-	if(!overflow)	//schreiben mÃ¶glich
+	if(!overflow)	//schreiben möglich
 	{
 		ringbuffer[indexWrite] = eventCode;
 		indexWrite++;
 		if(indexWrite >= GROESSE_RINGBUFFER)
-			indexWrite = 0;	//zurÃ¼ck auf anfangsposition
+			indexWrite = 0;	//zurück auf anfangsposition
 	}
 	
 	return overflow;
@@ -67,7 +67,7 @@ unsigned char fifo_read(void)
 	unsigned char eventCode;
 	static unsigned char indexRead = 0;
 	
-	//Code lesen und lÃ¶schen
+	//Code lesen und löschen
 	eventCode = ringbuffer[indexRead];
 	ringbuffer[indexRead] = 0;
 	

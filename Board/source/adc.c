@@ -4,7 +4,7 @@
  * @Author:		Gianni Ruf
  * @Version:	1.0
  **********************************
- * Datum			Version	Name			Änderung
+ * Datum			Version	Name			Ã„nderung
  * 10. Sep 2019		1.0		Gianni Ruf		Erstellung
  */ 
 
@@ -65,12 +65,12 @@ unsigned char adc_state(void)
 
 /**
 * Read & Convert with min/max
-* @param: *myADC adresse von datenstruktur (min/max muss ausgefühlt sein)
+* @param: *myADC adresse von datenstruktur (min/max muss ausgefÃ¼hlt sein)
 */
 void adc_read(adc_t *myADC)
 {
 	myADC->result_raw = ADC;
 	
-	//Verhältniss (Realer Messbereich) zu Digitalausgabe * Rohwert(0...1023) + Minimumwert (Achsenabschnitt)
+	//VerhÃ¤ltniss (Realer Messbereich) zu Digitalausgabe * Rohwert(0...1023) + Minimumwert (Achsenabschnitt)
 	myADC->result = ((myADC->result_MAX - myADC->result_MIN) / 1024.0) * myADC->result_raw + myADC->result_MIN;
 }

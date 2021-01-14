@@ -5,7 +5,7 @@
  * Author: rufg
  * 
  * Library zum Bedienen der ELOB-I2C-Schnittstelle
- * Interrupts müssen im main() freigegeben werden (sei();)
+ * Interrupts mÃ¼ssen im main() freigegeben werden (sei();)
  */ 
 
 
@@ -28,7 +28,7 @@ unsigned char i2c_readFinished;	//1 = lesen beendet
 
 /**
  * Initialisiert I2C-Schnittstelle
- * @param:	TWBR	0...255 für TWBR- TWI Bit Rate Register
+ * @param:	TWBR	0...255 fÃ¼r TWBR- TWI Bit Rate Register
  * @pram:	TWPS	Prescaler Value 1, 4, 16, 64
  * @return:	void
  */
@@ -38,7 +38,7 @@ void I2C_init(unsigned char, unsigned char);
  * Startet eine I2C-SCHREIB-Kommunikation
  * @param:	SlvAdress	7-Bit
  * @param:	WordAdress	8-Bit
- * @param:	AnzBytes die am Stück geschrieben werden	0..20
+ * @param:	AnzBytes die am StÃ¼ck geschrieben werden	0..20
  * @return:	void
  */
 void I2C_write_start(unsigned char, unsigned char, unsigned char);
@@ -47,7 +47,7 @@ void I2C_write_start(unsigned char, unsigned char, unsigned char);
  * Startet eine I2C-LESE-Kommunikation
  * @param:	SlvAdress	7-Bit
  * @param:	WordAdress	8-Bit
- * @param:	AnzBytes die am Stück gelesen werden	0..20
+ * @param:	AnzBytes die am StÃ¼ck gelesen werden	0..20
  * @return:	void
  */
 void I2C_read_start(unsigned char, unsigned char, unsigned char);

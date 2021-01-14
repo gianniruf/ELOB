@@ -10,17 +10,38 @@
 #define FIFO_H_
 
 //***DEFINES***
+
 //hier kommen die Codes rein
 
 //***digiTaster***
-//0000XXXXX
-#define FIFO_DIGITASTER_PRESS		0b00000001
-#define FIFO_DIGITASTER_REALISE		0b00000010
+//0x0X
+#define FIFO_DIGITASTER_PRESS		0x01
+#define FIFO_DIGITASTER_REALISE		0x02
 
 //***tastenmatrix***
-//0001XXXX
-#define FIFO_TASTENMATRIX_PRESS		0b00010001
-#define FIFO_TASTENMATRIX_REALISE	0b00010010
+//0x1X
+#define FIFO_TASTENMATRIX_PRESS		0x11
+#define FIFO_TASTENMATRIX_REALISE	0x12
+
+//***i2c***
+//0x2X
+#define FIFO_I2C_READDATA			0x21	//Mastermode, read from Slave
+#define FIFO_I2C_WROTEDATA			0x22	//Mastermode, write to Slave
+#define FIFO_I2C_GOTADDRESSED		0x23	//Slavemode, got Addressed
+#define FIFO_I2C_SENDDATA			0x24	//Slavemode, sand data to Master
+#define FIFO_I2C_GOTDATA			0x25	//Slavemode, got Data from Master
+#define FIFO_I2C_ERROR				0x26	//Error, see I2C.error
+
+//***uart***
+//0x3X
+#define FIFO_UART_GOTDATA			0x31
+#define FIFO_UART_ERROR				0x32
+
+//***cmd_executer***
+//0x4X
+#define FIFO_CMDEXE_ERROR			0x41
+#define FIFO_CMDEXE_INV_PARAM		0x42
+#define FIFO_CMDEXE_CMD_NOTFOUND	0x43
 
 //***VARIABLEN***
 

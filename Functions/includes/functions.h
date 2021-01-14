@@ -4,7 +4,7 @@
  * Created: 03.05.2020 10:14:41
  *  Author: rufg
  *
- * Hier sind einige nÃ¼tzliche Funktionen
+ * Hier sind einige nützliche Funktionen
  */ 
 
 
@@ -23,7 +23,7 @@
 
 /**
  * Wandelt Grad in Radiant um
- * @param:	winkel in Â°		(float)
+ * @param:	winkel in °		(float)
  * @return:	winkel in PI	(float)
  */
 float degToRad(float winkel);
@@ -31,7 +31,7 @@ float degToRad(float winkel);
 /**
  * Wandelt Radiant in Winkel um
  * @param:	winkel in PI	(float)
- * @return:	winkel in Â°		(float)
+ * @return:	winkel in °		(float)
  */
 float radToDeg(float winkel);
 

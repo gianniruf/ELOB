@@ -1,15 +1,15 @@
 # ELOB
 Librarys for the ELOB <br>
-Programming-Language: <tab> c (Assembler is also possible)
-speaking-language: <tab> english and germang (Deutsch)
+Programming-language: c (Assembler is also possible)<br>
+Speaking-language: english and german (Deutsch)
 
 # NOT READY TO USE YET !!!
 
 ## What is ELOB?
 ELOB is the Elektroniker Board from ZLV-Mint. It's for the Software-Education of Elektroniker. <br>
 On the ELOB is an ATMega2560 and the Atmel-ICE3. <br>
-Board:<tab><tab>https://www.s-tec.ch/produkte/zlv-mint-schulungsboard  <br> 
-Controller:<tab>https://www.microchip.com/wwwproducts/en/ATmega2560 <br>
+Board:	https://www.s-tec.ch/produkte/zlv-mint-schulungsboard  <br> 
+Controller: https://www.microchip.com/wwwproducts/en/ATmega2560 <br>
 
 ## What is on the ELOB?
 - LCD <br>
@@ -29,4 +29,4 @@ For heating it requires 24 VDC
 - I2C <br>
 - UART  <br>
 - SPI <br>
-- digital I/O <br>
+- digital I/Os <br>

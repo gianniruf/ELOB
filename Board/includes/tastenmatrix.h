@@ -64,7 +64,7 @@
 #define matrix_8_neg		(zeile3.flanke_neg & (1<<5))
 #define matrix_9_neg		(zeile3.flanke_neg & (1<<6))
 
-//***auswahl für Umrechnung***
+//***auswahl fÃ¼r Umrechnung***
 #define MATRIX_SEL_STATE	0
 #define MATRIX_SEL_POS		1
 #define MATRIX_SEL_NEG		2
@@ -94,7 +94,7 @@ struct taster_matrix zeile3;
 unsigned int tastenmatrix_matrixToInt(unsigned int , unsigned char);
 
 /**
- * Erkennt flanken/Zustände an Tastenmatrix
+ * Erkennt flanken/ZustÃ¤nde an Tastenmatrix
  *@param	void
  *@return	void
  */

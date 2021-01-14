@@ -2,7 +2,7 @@
  * elob7Seg.h
  *
  * Created: 18.03.2020 09:58:38
- *  Author: rufg
+ * Author: rufg
  */ 
 
 

@@ -140,7 +140,7 @@ void segVorbereitung(unsigned char hochkomma)
 
 /**
  * Wandelt Hex-Werte in Dez ausgabewerte um
- * @param: elob7seg_ausbageHex_werte muss mit Dez 0..16 werten abgef¸llt sein!!!
+ * @param: elob7seg_ausbageHex_werte muss mit Dez 0..16 werten abgef√ºllt sein!!!
  */
 void elob7seg_ausgabeHex()
 {
@@ -202,7 +202,7 @@ void elob7seg_ausgabeDez(int zahl, unsigned char hKom, unsigned char DoppP, unsi
 		ledSegDOP_off;
 	}
 	
-	if (stelle == komma && stelle > 0)	//komma am schluss ist ¸berfl¸ssig
+	if (stelle == komma && stelle > 0)	//komma am schluss ist √ºberfl√ºssig
 	{
 		komma_on;
 	}

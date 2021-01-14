@@ -29,7 +29,7 @@ unsigned char elob7seg_sonderzeichen[3];	//stelle Komma(0..3)|Hochkomma (1=leuch
 void elob7seg_init(void);
 
 /**
- * FÃ¼llt eine INT in das String "elob7seg[4]" ab
+ * Füllt eine INT in das String "elob7seg[4]" ab
  * @param: int zahl, -999...9999
  * @return: void
  */

@@ -22,12 +22,12 @@ void elobLcd_init(void);
 
 /**
  * Gibt ein Zeichen aus
- * @param	gewünschtes Zeichen in char (mit 'X')
+ * @param	gewÃ¼nschtes Zeichen in char (mit 'X')
  */
 void elobLcd_zeichen(unsigned char);
 
 /**
- * Führt 8-Bit/4-Bit befehl aus
+ * FÃ¼hrt 8-Bit/4-Bit befehl aus
  * @param	Befehl 8Bit
  */
 void elobLcd_instruktion(unsigned char);	//befehl

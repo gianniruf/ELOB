@@ -24,7 +24,7 @@ void fifo_init(void)
 {
 	for (int i = 0; i<GROESSE_RINGBUFFER; i++)
 	{
-		ringbuffer[i] = 0;	//alles mit 0 füllen
+		ringbuffer[i] = 0;	//alles mit 0 fÃ¼llen
 	}
 }
 
@@ -46,12 +46,12 @@ unsigned char fifo_write(unsigned char eventCode)
 		overflow = 1;
 	
 	//Write Code in buffer
-	if(!overflow)	//schreiben möglich
+	if(!overflow)	//schreiben mÃ¶glich
 	{
 		ringbuffer[indexWrite] = eventCode;
 		indexWrite++;
 		if(indexWrite >= GROESSE_RINGBUFFER)
-			indexWrite = 0;	//zurück auf anfangsposition
+			indexWrite = 0;	//zurÃ¼ck auf anfangsposition
 	}
 	
 	return overflow;
@@ -67,7 +67,7 @@ unsigned char fifo_read(void)
 	unsigned char eventCode;
 	static unsigned char indexRead = 0;
 	
-	//Code lesen und löschen
+	//Code lesen und lÃ¶schen
 	eventCode = ringbuffer[indexRead];
 	ringbuffer[indexRead] = 0;
 	
